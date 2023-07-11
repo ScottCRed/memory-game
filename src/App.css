@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gameContainer {
+  min-height: 75vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header - Footer */
+#header {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  width: auto;
+  padding-left: 5%;
+  font-weight: 600;
+}
+
+.main {
+  background-color: #1d2d3a;
+  height: 150px;
+  color: rgb(241, 241, 241);
+  font-size: 100px;
+}
+
+.footer {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: auto;
+  background-color: #1d2d3a;
+  height: 100px;
+  color: rgb(241, 241, 241);
+  font-size: 20px;
+  font-weight: 100;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Header - Footer */
