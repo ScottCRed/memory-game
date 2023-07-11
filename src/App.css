@@ -7,6 +7,23 @@ body {
   min-height: 75vh;
 }
 
+.card {
+  max-width: 250px;
+  min-height: 250px;
+  border-radius: 10px;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 250px;
+  min-height: 245px;
+  border-radius: 10px;
+}
+
 
 /* Header - Footer */
 #header {
