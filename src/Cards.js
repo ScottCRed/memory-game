@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { characters } from "./characters"
 import Card from "./Card";
 
-const Cards = (props) => {
-    const { id, onClick, src, name} = props
+const Cards = () => {
     const [randomCards, setRandomCards] = useState(characters);
     const [clickedCards, setClickedCards] = useState([]);
 
@@ -18,7 +17,7 @@ const Cards = (props) => {
             setClickedCards([]);
             console.log('card already clicked');
         }
-    }
+    };
 
     function shuffle() {
         const shuffledCards = [...characters];
@@ -29,9 +28,11 @@ const Cards = (props) => {
       setRandomCards(shuffledCards);
       console.log("shuflled");
     };
+
     useEffect(() => {
         shuffle();
     }, []);
+
     return (
         randomCards.map((char) => {
             return (
