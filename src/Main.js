@@ -17,8 +17,8 @@ function Main () {
             currentScore={currentScore} 
             maxScore={maxScore}/>
 
-            <GameContainer />
-            
+            <GameContainer setScore={setCurrentScore} score={currentScore} />
+
             <Footer 
             className='footer' 
             content='Created by Scott Carroll 2023'/>

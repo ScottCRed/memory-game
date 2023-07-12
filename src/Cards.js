@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { characters } from "./characters"
 import Card from "./Card";
 
-const Cards = () => {
+const Cards = (props) => {
+    const {setScore, score} = props
+
     const [randomCards, setRandomCards] = useState(characters);
     const [clickedCards, setClickedCards] = useState([]);
 
@@ -10,11 +12,12 @@ const Cards = () => {
         const target = e.target.id;
         if (!clickedCards.includes(target)) {
             setClickedCards(clickedCards.concat(target));
-            console.log(clickedCards);
+            setScore(score+1);
             shuffle();
         }
         else {
             setClickedCards([]);
+            setScore(0);
             console.log('card already clicked');
         }
     };

@@ -1,9 +1,10 @@
 import Cards from "./Cards";
 
-const GameContainer = () => {
+const GameContainer = (props) => {
+    const {setScore, score} = props
     return (
         <div className="gameContainer">
-            <Cards />
+            <Cards setScore={setScore} score={score} />
         </div>
     );
 };
