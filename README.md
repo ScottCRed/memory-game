@@ -1,5 +1,4 @@
 # Outline
-
 - Create a memory game in which the user is presented with a number of similar themed pictures. 
 - The user must click on a picture which they have not clicked on before.
 - If the User succesfully clicks on a new picture all the pictures are shuffled and 1 point is added to theri score.
@@ -13,21 +12,39 @@
 
 ## Components
 
+### Main
+- states > currentScore, maxScore, bestScore
+- Header
+- GameContainer
+- Footer
+
 ### Header
 - Title
+- ScoreBoard
 
 ### Footer
 - Info
 
 ### GameContainer
-- function ShuffleId > should shuffle list of id numbers
+- wrapper for Cards component
 
-### PictureCard
-- props = id, imgSource, imgLabel
+### Card
+- props = id, src, name, onClick
+
+### Cards
+- Randomise function >> randomCards state >> Fisher-Yates algorithm 
+- newBest function >> set state of best score
+- checkClick function >> check if the current clicked card has been clicked already. If not then adds id to clickedCards state. If it has then reset current score and clickedCards
+- return >> maps over randomCards and returns Card component for each one
 
 ### ScoreBoard
-- states > currentScore
+- states > currentScore, bestScore
 
 ## Images
 https://gamerant.com/demon-slayer-every-character-age-height-birthday/
 https://villains.fandom.com/wiki/Category:Demon_Slayer_Villains
+
+## Bonus objectives
+- 2 sets of cards >> button to switch between
+- Welcome page asking for user name >> routed to main page and user name displayed
+- Win state for max score 
