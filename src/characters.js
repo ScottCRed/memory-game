@@ -107,10 +107,4 @@ export const characters = [
         id: uniqid(),
         name: "Kagaya Ubuyashiki"
     },
-
-    {
-        src: "",
-        id: uniqid(),
-        name: ""
-    },
 ]
