@@ -3,16 +3,24 @@ import { characters } from "./characters"
 import Card from "./Card";
 
 const Cards = (props) => {
-    const {setScore, score} = props
+    const {setScore, score, bestScore, setBestScore} = props
 
     const [randomCards, setRandomCards] = useState(characters);
     const [clickedCards, setClickedCards] = useState([]);
 
+    function newBest () {
+        const result = score + 1
+        if (result > bestScore) {
+            setBestScore(result);
+        }
+    }
+
     const checkClick = (e) => {
         const target = e.target.id;
         if (!clickedCards.includes(target)) {
+            newBest();
             setClickedCards(clickedCards.concat(target));
-            setScore(score+1);
+            setScore((prevScore) => prevScore+1);
             shuffle();
         }
         else {

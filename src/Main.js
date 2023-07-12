@@ -7,6 +7,7 @@ import { characters } from "./characters";
 function Main () {
     const [currentScore, setCurrentScore] = useState(0);
     const [maxScore, setMaxScore] = useState(characters.length)
+    const [bestScore, setBestScore] = useState(0);
 
     return (
         <>
@@ -15,9 +16,14 @@ function Main () {
             id="header" 
             title="Memory Game" 
             currentScore={currentScore} 
-            maxScore={maxScore}/>
+            maxScore={maxScore}
+            bestScore={bestScore}/>
 
-            <GameContainer setScore={setCurrentScore} score={currentScore} />
+            <GameContainer 
+            setScore={setCurrentScore} 
+            score={currentScore} 
+            bestScore={bestScore}
+            setBestScore={setBestScore}/>
 
             <Footer 
             className='footer' 
