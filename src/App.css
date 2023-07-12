@@ -5,6 +5,10 @@ body {
 
 .gameContainer {
   min-height: 75vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
@@ -22,7 +26,7 @@ body {
 
 img {
   max-width: 300px;
-  min-height: 180px;
+  height: auto;
   border-radius: 10px;
 }
 
