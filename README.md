@@ -30,3 +30,4 @@
 
 ## Images
 https://gamerant.com/demon-slayer-every-character-age-height-birthday/
+https://villains.fandom.com/wiki/Category:Demon_Slayer_Villains
