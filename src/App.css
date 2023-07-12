@@ -26,6 +26,25 @@ img {
   border-radius: 10px;
 }
 
+p {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.scoreBoard {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 2px;
+  color: white;
+  height: 140px;
+  width: 300px;
+  font-size: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 
 /* Header - Footer */
 #header {
@@ -33,7 +52,9 @@ img {
   align-items: center;
   width: auto;
   padding-left: 5%;
+  padding-right: 5%;
   font-weight: 600;
+  justify-content: space-between;
 }
 
 .main {
