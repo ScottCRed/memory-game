@@ -1,9 +1,9 @@
-import Card from "./Cards";
+import Cards from "./Cards";
 
 const GameContainer = () => {
     return (
         <div className="gameContainer">
-            <Card />
+            <Cards />
         </div>
     );
 };
