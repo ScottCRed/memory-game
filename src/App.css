@@ -9,6 +9,8 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  background-image: url("https://wallpaperaccess.com/full/8225597.png");
+  background-size:cover;
 }
 
 .card {
@@ -62,7 +64,7 @@ p {
 }
 
 .main {
-  background-color: #1d2d3a;
+  background-color: #08061e;
   height: 150px;
   color: rgb(241, 241, 241);
   font-size: 100px;
@@ -73,7 +75,7 @@ p {
   align-items: center;
   justify-content: center;
   width: auto;
-  background-color: #1d2d3a;
+  background-color: #08061e;;
   height: 100px;
   color: rgb(241, 241, 241);
   font-size: 20px;
