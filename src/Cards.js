@@ -6,10 +6,16 @@ const Card = () => {
     const [clickedCards, setClickedCards] = useState([]);
 
     const checkClick = (e) => {
-        console.log(e.target.id);
-        setClickedCards(clickedCards.concat(e.target.id));
-        console.log(clickedCards);
-        shuffle();
+        const target = e.target.id;
+        if (!clickedCards.includes(target)) {
+            setClickedCards(clickedCards.concat(target));
+            console.log(clickedCards);
+            shuffle();
+        }
+        else {
+            setClickedCards([]);
+            console.log('card already clicked');
+        }
     }
 
     function shuffle() {
