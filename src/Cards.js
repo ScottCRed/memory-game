@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { characters } from "./characters"
+import Card from "./Card";
 
-const Card = () => {
+const Cards = (props) => {
+    const { id, onClick, src, name} = props
     const [randomCards, setRandomCards] = useState(characters);
     const [clickedCards, setClickedCards] = useState([]);
 
@@ -33,13 +35,16 @@ const Card = () => {
     return (
         randomCards.map((char) => {
             return (
-                <div className="card" key={char.id} id={char.id} onClick={checkClick}>
-                    <img src={char.src} alt={char.name} id={char.id}/>
-                    {char.name}
+                <div key={char.id}>
+                    <Card 
+                    id={char.id} 
+                    onClick={checkClick} 
+                    src={char.src} 
+                    name={char.name}/>
                 </div>
             );
         })
     );
 };
 
-export default Card;
+export default Cards;
