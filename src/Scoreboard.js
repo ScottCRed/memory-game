@@ -1,6 +1,8 @@
+import { characters } from "./characters";
 
 function Scoreboard (props) {
-    const {currentScore, maxScore, bestScore} = props
+    const {currentScore, maxScore, heroMax, villainMax, characterSelect} = props
+    const bestScore = characterSelect===characters ? heroMax : villainMax;
     return (
         <>
         <div className="scoreBoard">

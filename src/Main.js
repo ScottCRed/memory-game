@@ -1,16 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { characters } from "./characters";
+import { villains } from "./villains";
 import Footer from "./Footer";
 import GameContainer from "./GameContainer";
 import Header from "./Header";
-import { characters } from "./characters";
-import { villains } from "./villains";
 import NavBar from "./NavBar";
-import { useEffect } from "react";
 
 function Main () {
     const [currentScore, setCurrentScore] = useState(0);
     const [maxScore, setMaxScore] = useState(characters.length)
-    const [bestScore, setBestScore] = useState(0);
+    const [heroMax, setHeroMax] = useState(0);
+    const [villainMax, setVillainMax] = useState(0);
     const [characterSelect, setCharacterSelect] = useState(characters);
     const [randomCards, setRandomCards] = useState(characters);
 
@@ -34,6 +34,7 @@ function Main () {
 
     useEffect(() => {
         shuffle(characterSelect);
+        setCurrentScore(0);
       }, [characterSelect]);
 
     useEffect(() => {
@@ -48,7 +49,9 @@ function Main () {
             title="Memory Game" 
             currentScore={currentScore} 
             maxScore={maxScore}
-            bestScore={bestScore}/>
+            heroMax={heroMax}
+            villainMax={villainMax}
+            characterSelect={characterSelect}/>
 
             <NavBar 
             setChoice={setCharacterSelect} 
@@ -60,8 +63,10 @@ function Main () {
             <GameContainer 
             setScore={setCurrentScore} 
             score={currentScore} 
-            bestScore={bestScore}
-            setBestScore={setBestScore}
+            heroMax={heroMax}
+            setHeroMax={setHeroMax}
+            villainMax={villainMax}
+            setVillainMax={setVillainMax}
             characterSelect={characterSelect}
             shuffle={shuffle}
             randomCards={randomCards}

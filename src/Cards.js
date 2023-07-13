@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 import Card from "./Card";
+import { villains } from "./villains";
+import { characters } from "./characters";
 
 const Cards = (props) => {
     const {
         setScore, 
         score, 
-        bestScore, 
-        setBestScore, 
+        heroMax, 
+        setHeroMax, 
+        villainMax,
+        setVillainMax,
         characterSelect, 
         shuffle, 
         randomCards } = props
@@ -15,8 +19,11 @@ const Cards = (props) => {
 
     function newBest () {
         const result = score + 1
-        if (result > bestScore) {
-            setBestScore(result);
+        if (result > heroMax && characterSelect===characters) {
+            setHeroMax(result);
+        }
+        else if (result > villainMax && characterSelect===villains) {
+            setVillainMax(result);
         }
     }
 

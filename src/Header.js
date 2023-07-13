@@ -1,7 +1,7 @@
 import Scoreboard from "./Scoreboard";
 
 const Header = (props) => {
-    const {className, title, id, currentScore, maxScore, bestScore} = props
+    const {className, title, id, currentScore, maxScore, heroMax, villainMax, characterSelect} = props
     return (
         <div>
             <div className={className} id={id}>
@@ -9,7 +9,9 @@ const Header = (props) => {
                 <Scoreboard 
                 currentScore={currentScore} 
                 maxScore={maxScore}
-                bestScore={bestScore}/>
+                heroMax={heroMax}
+                villainMax={villainMax}
+                characterSelect={characterSelect}/>
                 </div>
             
         </div>
