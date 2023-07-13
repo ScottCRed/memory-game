@@ -29,6 +29,11 @@ body {
   background-color: #08061eb3;
 }
 
+.card:hover {
+  transform:scale(1.05);
+  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 5px -1px,rgba(255, 254, 254, 0.14) 0 6px 10px 0,rgba(255, 255, 255, 0.12) 0 1px 18px 0;
+}
+
 img {
   max-width: 300px;
   height: auto;
@@ -54,6 +59,19 @@ p {
   justify-content: space-around;
 }
 
+button {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 2px;
+  color: white;
+  background-color: #08061e0f;
+}
+
+button:hover {
+  background-color: #611d92d0;
+  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 5px -1px,rgba(255, 254, 254, 0.14) 0 6px 10px 0,rgba(255, 255, 255, 0.12) 0 1px 18px 0;
+}
+
 
 /* Header - Footer */
 #header {
@@ -71,6 +89,16 @@ p {
   height: 150px;
   color: rgb(241, 241, 241);
   font-size: 100px;
+}
+
+.navBar {
+  background-color: #08061e;
+  color: rgb(241, 241, 241);
+  font-size: 18px;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: grid;
+  grid-template-columns: 82% 9% 9%;
 }
 
 .footer {

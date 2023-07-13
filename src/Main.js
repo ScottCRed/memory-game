@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import GameContainer from "./GameContainer";
 import Header from "./Header";
 import { characters } from "./characters";
+import NavBar from "./NavBar";
 
 function Main () {
     const [currentScore, setCurrentScore] = useState(0);
@@ -18,6 +19,8 @@ function Main () {
             currentScore={currentScore} 
             maxScore={maxScore}
             bestScore={bestScore}/>
+
+            <NavBar />
 
             <GameContainer 
             setScore={setCurrentScore} 
