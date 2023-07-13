@@ -2,9 +2,15 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 
 const Cards = (props) => {
-    const {setScore, score, bestScore, setBestScore, characterSelect, shuffle, randomCards} = props
+    const {
+        setScore, 
+        score, 
+        bestScore, 
+        setBestScore, 
+        characterSelect, 
+        shuffle, 
+        randomCards } = props
 
-    // const [randomCards, setRandomCards] = useState(characterSelect);
     const [clickedCards, setClickedCards] = useState([]);
 
     function newBest () {
@@ -20,7 +26,7 @@ const Cards = (props) => {
             newBest();
             setClickedCards(clickedCards.concat(target));
             setScore((prevScore) => prevScore+1);
-            shuffle();
+            shuffle(characterSelect);
         }
         else {
             setClickedCards([]);
@@ -28,20 +34,6 @@ const Cards = (props) => {
             console.log('card already clicked');
         }
     };
-
-    // function shuffle() {
-    //     const shuffledCards = [...characterSelect];
-    //   for (let i = shuffledCards.length - 1; i > 0; i--) {
-    //     const j = Math.floor(Math.random() * (i + 1));
-    //     [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]];
-    //   }
-    //   setRandomCards(shuffledCards);
-    //   console.log("shuflled");
-    // };
-
-    // useEffect(() => {
-    //     shuffle();
-    // }, []);
 
     return (
         randomCards.map((char) => {

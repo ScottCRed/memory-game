@@ -1,7 +1,9 @@
+import { useState } from "react";
 import Cards from "./Cards";
 
 const GameContainer = (props) => {
-    const {setScore, score, bestScore, setBestScore, characterSelect, randomCards} = props
+    const {setScore, score, bestScore, setBestScore, characterSelect, randomCards, shuffle, setRandomCards} = props;
+    
     return (
         <div className="gameContainer">
             <Cards 
@@ -10,7 +12,9 @@ const GameContainer = (props) => {
             bestScore={bestScore}
             setBestScore={setBestScore}
             characterSelect={characterSelect}
-            randomCards={randomCards}/>
+            randomCards={randomCards}
+            shuffle={shuffle}
+            setRandomCards={setRandomCards}/>
         </div>
     );
 };

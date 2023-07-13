@@ -12,20 +12,32 @@ function Main () {
     const [maxScore, setMaxScore] = useState(characters.length)
     const [bestScore, setBestScore] = useState(0);
     const [characterSelect, setCharacterSelect] = useState(characters);
-    const [randomCards, setRandomCards] = useState(characterSelect);
+    const [randomCards, setRandomCards] = useState(characters);
 
-    function shuffle() {
-        const shuffledCards = [...characterSelect];
-      for (let i = shuffledCards.length - 1; i > 0; i--) {
+    const shuffle = (array) => {
+        const shuffledCards = [...array];
+        for (let i = shuffledCards.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]];
       }
-      setRandomCards(shuffledCards);
-      console.log("shuflled");
+       setRandomCards(shuffledCards);
+       console.log("shuflled");
+
+    };
+
+    function setVillains () {
+        setCharacterSelect(villains);
+    };
+    function setHeroes () {
+        setCharacterSelect(characters);   
     };
 
     useEffect(() => {
-        shuffle();
+        shuffle(characterSelect);
+      }, [characterSelect]);
+
+    useEffect(() => {
+        shuffle(characters);
     }, []);
 
     return (
@@ -40,7 +52,10 @@ function Main () {
 
             <NavBar 
             setChoice={setCharacterSelect} 
-            shuffle={shuffle}/>
+            shuffle={shuffle}
+            characterSelect={characterSelect}
+            setVillains={setVillains}
+            setHeroes={setHeroes}/>
 
             <GameContainer 
             setScore={setCurrentScore} 
@@ -49,7 +64,8 @@ function Main () {
             setBestScore={setBestScore}
             characterSelect={characterSelect}
             shuffle={shuffle}
-            randomCards={randomCards}/>
+            randomCards={randomCards}
+            setRandomCards={setRandomCards}/>
 
             <Footer 
             className='footer' 

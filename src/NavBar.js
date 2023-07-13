@@ -2,18 +2,7 @@ import { characters } from "./characters";
 import { villains } from "./villains";
 
 const NavBar = (props) => {
-    const { setChoice, shuffle } = props;
-
-    function setVillains () {
-        setChoice(villains);
-        console.log('villains');
-        shuffle();
-    };
-    function setHeroes () {
-        setChoice(characters);
-        console.log('heroes');
-        shuffle();
-    };
+    const { setVillains, setHeroes} = props;
 
     return (
         <div className="navBar">
