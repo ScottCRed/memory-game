@@ -1,6 +1,3 @@
-import { characters } from "./characters";
-import { villains } from "./villains";
-
 const NavBar = (props) => {
     const { setVillains, setHeroes} = props;
 
