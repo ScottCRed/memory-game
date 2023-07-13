@@ -27,9 +27,13 @@ function Main () {
 
     function setVillains () {
         setCharacterSelect(villains);
+        const background = document.querySelector(".gameContainer");
+        background.classList.add("gameSwitch");
     };
     function setHeroes () {
-        setCharacterSelect(characters);   
+        setCharacterSelect(characters); 
+        const background = document.querySelector(".gameContainer");
+        background.classList.remove("gameSwitch");  
     };
 
     useEffect(() => {

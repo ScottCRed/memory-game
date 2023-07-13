@@ -13,6 +13,16 @@ body {
   background-size:cover;
 }
 
+.gameSwitch {
+  min-height: 75vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://img.japankuru.com/prg_img/img/img2020080609340194698800.jpg");
+  background-size:cover;
+}
+
 .card {
   max-width: 300px;
   max-height: 220px;
@@ -35,8 +45,8 @@ body {
 }
 
 img {
-  max-width: 300px;
-  height: auto;
+  width: 300px;
+  max-height: 150px;
   border-radius: 10px;
 }
 
