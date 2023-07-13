@@ -7,31 +7,31 @@ export const villains = [
     },
 
     {
-        src: "https://static.wikia.nocookie.net/villains/images/1/18/Kokushibo_%28Anime%29.png/revision/latest/scale-to-width-down/1000?cb=20230423152919",
+        src: "https://staticg.sportskeeda.com/editor/2022/02/c1aa3-16459555065701-1920.jpg?w=840",
         id: uniqid(),
         name: "Kokoshibou",
     },
 
     {
-        src: "https://static.wikia.nocookie.net/villains/images/3/34/Doma_Anime.png/revision/latest?cb=20230430100326",
+        src: "https://cdn.oneesports.gg/cdn-data/2022/02/Anime_DemonSlayer_Doma_EntertainmentDistrictArcFinale.webp",
         id: uniqid(),
         name: "Doma",
     },
 
     {
-        src: "https://static.wikia.nocookie.net/villains/images/7/70/Akaza_Full_Body_Design_%25_28Anime%25_29.png/revision/latest?cb=20220126234306",
+        src: "https://i.ytimg.com/vi/HtJej9SHNw0/maxresdefault.jpg",
         id: uniqid(),
         name: "Akaza",
     },
 
     {
-        src: "https://static.wikia.nocookie.net/villains/images/1/13/Hantengu_full_body_%28Anime%29.png/revision/latest/scale-to-width-down/1000?cb=20230523184451",
+        src: "https://sportshub.cbsistatic.com/i/2023/04/23/4c572250-e333-431b-96a0-0739c3dd95b6/demon-slayer-season-3-hantengu-powers-explained.jpg",
         id: uniqid(),
         name: "Hantengu",
     },
 
     {
-        src: "https://static.wikia.nocookie.net/villains/images/c/c9/Gyokko_anime.png/revision/latest?cb=20230423160218",
+        src: "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/05/gyokko-demon.jpg",
         id: uniqid(),
         name: "Gyokko",
     },
@@ -49,13 +49,13 @@ export const villains = [
     },
 
     {
-        src: "https://static.wikia.nocookie.net/villains/images/a/a5/NakimeInfobox.jpg/revision/latest?cb=20191110205551",
+        src: "https://otakufr.s3.eu-west-3.amazonaws.com/demon_slayer_saison_3_qui_est_nakime_89549e6ddc.jpg",
         id: uniqid(),
         name: "Nakime",
     },
 
     {
-        src: "https://static.wikia.nocookie.net/villains/images/e/e8/Kaigaku_Profile_Pic.png/revision/latest?cb=20190902111132",
+        src: "https://staticc.sportskeeda.com/editor/2023/05/00aca-16839576327640.webp?w=840",
         id: uniqid(),
         name: "Kaigaku",
     },
@@ -72,19 +72,19 @@ export const villains = [
     },
 
     {
-        src: "https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/3/3e/Hand_Demon_about_to_kill_Sabito.png/revision/latest?cb=20190427171611",
+        src: "https://m.media-amazon.com/images/M/MV5BMWFjNTM2Y2UtYmExZi00NzNlLWI4MGUtYWNhNDQyM2I4ZWQyXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
         id: uniqid(),
         name: "Hand Demon",
     },
 
     {
-        src: "https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/1/15/Susamaru_and_Yahaba_attacking_Tamayo%27s_house.png/revision/latest?cb=20190525171841",
+        src: "https://i.ytimg.com/vi/QGndoU6yIZs/maxresdefault.jpg",
         id: uniqid(),
-        name: "Susamaru and Yahaba",
+        name: "Susamaru",
     },
 
     {
-        src: "https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/3/3c/Mother_Spider_Demon_getting_serious.png/revision/latest?cb=20190720165606",
+        src: "https://i0.wp.com/demonslayer.fr/wp-content/uploads/2021/09/Mother_Spider_Demon_threatened_by_Rui-1-1-1-1024x576.png?resize=1024%2C576&ssl=1",
         id: uniqid(),
         name: "Spider Mother",
     },
