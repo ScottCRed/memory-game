@@ -45,6 +45,7 @@ https://gamerant.com/demon-slayer-every-character-age-height-birthday/
 https://villains.fandom.com/wiki/Category:Demon_Slayer_Villains
 
 ## Bonus objectives
-- 2 sets of cards >> button to switch between
+- 2 sets of cards >> button to switch between >> done
 - Welcome page asking for user name >> routed to main page and user name displayed
 - Win state for max score 
+- Sauce (sounds etc.) >> done
