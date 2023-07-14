@@ -13,6 +13,7 @@ function Main () {
     const [villainMax, setVillainMax] = useState(0);
     const [characterSelect, setCharacterSelect] = useState(characters);
     const [randomCards, setRandomCards] = useState(characters);
+    const [loading, setLoading] = useState(false);
 
     const shuffle = (array) => {
         const shuffledCards = [...array];
@@ -39,6 +40,10 @@ function Main () {
     useEffect(() => {
         shuffle(characterSelect);
         setCurrentScore(0);
+        setLoading(true);
+        setTimeout(()=> {
+            setLoading(false);
+        }, 1000)
       }, [characterSelect]);
 
     useEffect(() => {
@@ -74,7 +79,9 @@ function Main () {
             characterSelect={characterSelect}
             shuffle={shuffle}
             randomCards={randomCards}
-            setRandomCards={setRandomCards}/>
+            setRandomCards={setRandomCards}
+            loading={loading}
+            setLoading={setLoading}/>
 
             <Footer 
             className='footer' 

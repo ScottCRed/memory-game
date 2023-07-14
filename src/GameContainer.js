@@ -1,11 +1,26 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import Cards from "./Cards";
+import { CircleLoader } from "react-spinners";
 
 const GameContainer = (props) => {
-    const {setScore, score, heroMax, setHeroMax, characterSelect, randomCards, shuffle, setRandomCards, villainMax, setVillainMax} = props;
+    const {setScore, score, heroMax, setHeroMax, characterSelect, randomCards, shuffle, setRandomCards, villainMax, setVillainMax, loading, setLoading } = props;
+
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(()=> {
+            setLoading(false);
+        }, 2000)
+    }, []);
     
     return (
         <div className="gameContainer">
+            {
+            loading ?
+            <CircleLoader 
+            size={200}
+            color="white"
+            loading={loading}/>
+            :
             <Cards 
             setScore={setScore} 
             score={score} 
@@ -17,6 +32,7 @@ const GameContainer = (props) => {
             randomCards={randomCards}
             shuffle={shuffle}
             setRandomCards={setRandomCards}/>
+            }
         </div>
     );
 };
