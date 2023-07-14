@@ -5,6 +5,8 @@ import Footer from "./Footer";
 import GameContainer from "./GameContainer";
 import Header from "./Header";
 import NavBar from "./NavBar";
+import biwa from "./sounds/biwa.mp3";
+import sword from "./sounds/sword.mp3"
 
 function Main () {
     const [currentScore, setCurrentScore] = useState(0);
@@ -27,14 +29,24 @@ function Main () {
     };
 
     function setVillains () {
+        const playBiwa = new Audio(biwa);
         setCharacterSelect(villains);
         const background = document.querySelector(".gameContainer");
         background.classList.add("gameSwitch");
+
+        setTimeout(()=> {
+            playBiwa.play();
+        },800);   
     };
     function setHeroes () {
+        const playSword = new Audio(sword);
         setCharacterSelect(characters); 
         const background = document.querySelector(".gameContainer");
         background.classList.remove("gameSwitch");  
+
+        setTimeout(()=> {
+            playSword.play();
+        }, 500)
     };
 
     useEffect(() => {
