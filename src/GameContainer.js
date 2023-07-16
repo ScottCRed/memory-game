@@ -9,7 +9,7 @@ const GameContainer = (props) => {
         setLoading(true);
         setTimeout(()=> {
             setLoading(false);
-        }, 2000)
+        }, 4000)
     }, []);
     
     return (

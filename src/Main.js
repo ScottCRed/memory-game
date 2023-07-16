@@ -7,6 +7,7 @@ import Header from "./Header";
 import NavBar from "./NavBar";
 import biwa from "./sounds/biwa.mp3";
 import sword from "./sounds/sword.mp3"
+import Welcome from "./Welcome";
 
 function Main () {
     const [currentScore, setCurrentScore] = useState(0);
@@ -16,6 +17,7 @@ function Main () {
     const [characterSelect, setCharacterSelect] = useState(characters);
     const [randomCards, setRandomCards] = useState(characters);
     const [loading, setLoading] = useState(false);
+    const [userName, setUserName] = useState('');
 
     const shuffle = (array) => {
         const shuffledCards = [...array];
@@ -75,11 +77,16 @@ function Main () {
             characterSelect={characterSelect}/>
 
             <NavBar 
-            setChoice={setCharacterSelect} 
-            shuffle={shuffle}
-            characterSelect={characterSelect}
             setVillains={setVillains}
-            setHeroes={setHeroes}/>
+            setHeroes={setHeroes}
+            userName={userName}/>
+
+            {
+            userName === '' ? 
+            
+            <Welcome setUserName={setUserName} />
+
+            :
 
             <GameContainer 
             setScore={setCurrentScore} 
@@ -94,6 +101,7 @@ function Main () {
             setRandomCards={setRandomCards}
             loading={loading}
             setLoading={setLoading}/>
+            }
 
             <Footer 
             className='footer' 
